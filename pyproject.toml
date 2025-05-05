@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chartinglib"
+version = "0.1.0"
+description = "A Textual-based charting library using Plotly"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+  {name = "Jaimin Patel", email = "pateljaimin1707@email.com"}
+]
+dependencies = [
+  "textual>=0.40.0",  # or your compatible version
+  "plotly>=5.0.0",
+  "pandas"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/chartinglib"
+"Bug Tracker" = "https://github.com/yourusername/chartinglib/issues"
