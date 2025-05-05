@@ -1,0 +1,9 @@
+Screen {
+    layout: vertical;
+}
+
+Container {
+    width: 100%;
+    height: 1fr;
+    padding: 1;
+}

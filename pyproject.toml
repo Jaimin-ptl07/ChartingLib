@@ -19,5 +19,4 @@ dependencies = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/chartinglib"
-"Bug Tracker" = "https://github.com/yourusername/chartinglib/issues"
+"Homepage" = "https://github.com/Jaimin-ptl07/ChartingLib"
