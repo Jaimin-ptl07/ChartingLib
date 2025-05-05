@@ -10,22 +10,20 @@ class DemoChartApp(App):
 
     def compose(self) -> ComposeResult:
         yield Header(show_clock=True)
+        yield ChartWidget(chart_type="bar", title="GDP Growth", widget_id="gdp_growth")
         yield Footer()
 
+
+
+    async def on_mount(self):
+        chart_widget = self.query_one("#gdp_growth", ChartWidget)
         # Sample data (e.g., line chart)
-        raw_data = {
-            "x": [1, 2, 3, 4, 5],
-            "y": [10, 20, 30, 25, 15]
+        chart_data = {
+            "labels": [1, 2, 3, 4, 5],
+            "values": [10, 20, 30, 25, 15]
         }
 
-        # Process it (optional depending on your chartinglib design)
-        #processor = DataProcessing(chart_type="line")
-        #processed_data = processor.process(raw_data)
-
-        # ChartWidget expects processed data and chart type
-        chart = ChartWidget(raw_data=raw_data, chart_type="line", widget_id="linechart", title="Demo Chart",)
-
-        yield Container(chart)
+        chart_widget.update_chart(new_data=chart_data, new_title=f"GDP_Growth")
 
 if __name__ == "__main__":
     app = DemoChartApp()

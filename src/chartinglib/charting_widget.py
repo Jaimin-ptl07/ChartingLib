@@ -157,4 +157,3 @@ class ChartWidget(Widget):
                 webbrowser.open(f"file://{self.temp_chart_path}")
             else:
                 self.app.notify(f"⚠ Chart file not found: {self.temp_chart_path}", severity="error")
-
